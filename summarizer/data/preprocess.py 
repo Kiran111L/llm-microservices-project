@@ -1,0 +1,19 @@
+# preprocess.py
+# Started preprocessing script (basic functions only)
+
+import re
+import string
+
+def lowercase_text(text: str) -> str:
+    """Convert text to lowercase"""
+    return text.lower()
+
+def remove_punctuation(text: str) -> str:
+    """Remove punctuation from text"""
+    return text.translate(str.maketrans('', '', string.punctuation))
+
+if __name__ == "__main__":
+    sample = "Large Language Models Summarize 100% of Documents!"
+    print("Original:", sample)
+    print("Lowercase:", lowercase_text(sample))
+    print("No Punctuation:", remove_punctuation(sample))
